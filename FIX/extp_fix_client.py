@@ -253,36 +253,36 @@ if __name__ == "__main__":
     run_fix_client_in_thread(order_session)
 
     # Placing Orders
-    now = str(datetime.datetime.now().timestamp())
-    symbol = 'BTC-USD'
-    qty = 0.001
-    limit_fok_slippage = 0.0
-    sleep_after_order = 1
+    #now = str(datetime.datetime.now().timestamp())
+    #symbol = 'BTC-USD'
+    #qty = 0.00
+    #limit_fok_slippage = 0.0
+    #sleep_after_order = 1
 
-    order_session.place_order_market_buy(
-        now + '-buy-market', symbol, qty)
-    time.sleep(sleep_after_order)
-    print()
+    #order_session.place_order_market_buy(
+    #    now + '-buy-market', symbol, qty)
+    #time.sleep(sleep_after_order)
+    #print()
 
-    order_session.place_order_market_sell(
-        now + '-sell-market', symbol, qty)
-    time.sleep(sleep_after_order)
-    print()
+    #order_session.place_order_market_sell(
+    #    now + '-sell-market', symbol, qty)
+    #time.sleep(sleep_after_order)
+    #print()
 
-    order_session.place_order_limit_fok_buy(
-        now + '-buy-limit-fok', symbol, qty, market_data_session.get_extp_offer(symbol, qty) + limit_fok_slippage)
-    time.sleep(sleep_after_order)
-    print()
+    #order_session.place_order_limit_fok_buy(
+    #    now + '-buy-limit-fok', symbol, qty, market_data_session.get_extp_offer(symbol, qty) + limit_fok_slippage)
+    #time.sleep(sleep_after_order)
+    #print()
 
-    order_session.place_order_limit_fok_sell(
-        now + '-sell-limit-fok', symbol, qty, market_data_session.get_extp_bid(symbol, qty) - limit_fok_slippage)
-    time.sleep(sleep_after_order)
-    print()
+    #order_session.place_order_limit_fok_sell(
+    #    now + '-sell-limit-fok', symbol, qty, market_data_session.get_extp_bid(symbol, qty) - limit_fok_slippage)
+    #time.sleep(sleep_after_order)
+    #print()
 
     # Waiting for execution reports
     time.sleep(3)
 
     # Stop
-    order_session.stop()
-    market_data_session.stop()
+    #order_session.stop()
+    #market_data_session.stop()
     sys.exit(0)
