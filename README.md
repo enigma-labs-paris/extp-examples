@@ -1,2 +1,2 @@
 # api-samples-python
-Repository which gathers all the samples to consume Enigma API in Python
+Repository which gathers all the samples to consume Enigma API in Python and C#
